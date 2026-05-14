@@ -15,7 +15,7 @@ $cartCount = array_sum($_SESSION['cart'] ?? []);
     <!-- NAVBAR -->
     <nav class="flex flex-row border-b border-gray-200 bg-taupe-50 sticky top-0 z-50">
         <div class="container mx-auto flex items-center px-3 justify-between py-3">
-            <a href="home.php" class="flex items-center gap-2 font-code text-2xl font-semibold tracking-wide">
+            <a href="index.php" class="flex items-center gap-2 font-code text-2xl font-semibold tracking-wide">
                 <img src="assets/dc_logobg.png" alt="Daily Coffee Logo" class="w-9 h-9"
                     onerror="this.style.display='none'">
                 DAILY COFFEE
@@ -37,10 +37,10 @@ $cartCount = array_sum($_SESSION['cart'] ?? []);
     <!-- THE REST -->
     <main class="flex items-center justify-center min-h-screen bg-taupe-50">
         
-    <div class="absolute inset-0 z-0">
-        <img src="assets/bg1.jpg"
-             class="w-full h-full object-cover opacity-50">
-    </div>
+        <div class="absolute inset-0 z-0">
+            <img src="assets/bg1.jpg"
+                class="w-full h-full object-cover opacity-50">
+        </div>
 
         <div class="w-full max-w-2xl z-10 text-center font-[Newsreader]">
 
