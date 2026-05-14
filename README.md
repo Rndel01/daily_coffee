@@ -1,3 +1,20 @@
+## Web Completion???
+
+FrontEnd -- (Next.JS, Tailwind CSS)
+Web Pages
+
+  Home               - Almost there
+  Login and signup   - Good, but no server interaction
+  Cart               - missing
+  Menu               - missing
+  Profile            - missing
+  Admin Settings     - missing
+  Admin Dasshboard   - missing
+
+BackEnd -- (PHP??)
+  Communication with FrontEnd   - missing
+  Database                      - missing
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
