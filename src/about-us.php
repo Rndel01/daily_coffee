@@ -12,7 +12,7 @@ $cartCount = array_sum($_SESSION['cart'] ?? []);
 </head>
 
 <body class="overflow-hidden">
-    <!-- HEADER -->
+    <!-- NAVBAR -->
     <nav class="flex flex-row border-b border-gray-200 bg-taupe-50 sticky top-0 z-50">
         <div class="container mx-auto flex items-center px-3 justify-between py-3">
             <a href="home.php" class="flex items-center gap-2 font-code text-2xl font-semibold tracking-wide">
@@ -34,29 +34,42 @@ $cartCount = array_sum($_SESSION['cart'] ?? []);
         </div>
     </nav>
 
-<main class="flex items-center justify-center min-h-screen bg-taupe-50">
-    <div class="w-full max-w-2xl text-center font-[Newsreader]">
+    <!-- THE REST -->
+    <main class="flex items-center justify-center min-h-screen bg-taupe-50">
 
-        <h3 class="text-black mb-6 text-7xl font-bold ">About Us</h3>
+        <div class="absolute inset-0 pointer-events-none z-0">
+            <img src="assets/coffee2.png"
+                class="absolute left-100 top-30 w-100 h-160 object-cover rounded-3xl opacity-20">
 
-        <p class="text-gray-700 leading-relaxed mb-4 text-xl font-semibold">
-            To us, coffee is both an art and a rigorous science. At The Daily Coffee Shop, we’ve stripped
-            away the fluff to focus on what matters, the beans.
-        </p>
+            <img src="assets/coffee1.png"
+                class="absolute right-90 top-20 w-120 h-90 object-cover rounded-3xl opacity-20">
 
-        <p class="text-gray-700 leading-relaxed mb-6 text-xl font-semibold">
-            We source our beans through ethical, direct-trade partnerships, ensuring every harvest is
-            sustainable and every farmer is paid fairly. Our baristas are obsessed with the details such as
-            dialing in the grind size, monitoring water temperature, and perfecting the extraction to ensure
-            that every cup reflects the unique interior of its origin.
-        </p>
+            <img src="assets/coffee3.jpg"
+                class="absolute right-110 bottom-30 w-90 h-100 object-cover rounded-3xl opacity-20">
+        </div>
 
-        <p class="text-gray-700 leading-relaxed text-xl font-semibold">
-            Quality isn't just a goal for us but a daily standard
-        </p>
+        <div class="w-full max-w-2xl z-10 text-center font-[Newsreader]">
 
-    </div>
-</main>
+            <h3 class="text-black mb-6 text-7xl font-bold ">About Us</h3>
+
+            <p class="text-black leading-relaxed mb-4 text-xl font-semibold">
+                To us, coffee is both an art and a rigorous science. At The Daily Coffee Shop, we’ve stripped
+                away the fluff to focus on what matters, the beans.
+            </p>
+
+            <p class="text-black leading-relaxed mb-6 text-xl font-semibold">
+                We source our beans through ethical, direct-trade partnerships, ensuring every harvest is
+                sustainable and every farmer is paid fairly. Our baristas are obsessed with the details such as
+                dialing in the grind size, monitoring water temperature, and perfecting the extraction to ensure
+                that every cup reflects the unique interior of its origin.
+            </p>
+
+            <p class="text-black leading-relaxed text-xl font-semibold">
+                Quality isn't just a goal for us but a daily standard
+            </p>
+
+        </div>
+    </main>
 
     <footer class="bg-taupe-100 border-t border-taupe-200 text-center py-8 text-sm text-gray-700 tracking-wide mt-auto">
         <p class="font-semibold">CONTACT US</p>

@@ -1,5 +1,5 @@
 <?php
-// --- Data & Logic ---
+
 $coffees = [
     ["name" => "Daily Coffee",      "category" => "cold",       "price" => 150.00, "image" => "/assets/daily-coffee.jpg"],
     ["name" => "Matcha",            "category" => "cold",       "price" => 160.00, "image" => "/assets/matcha.jpg"],
@@ -24,7 +24,7 @@ foreach ($coffees as $item) {
 
 $categories = ["cold", "hot", "non-coffee"];
 
-// ─── Cart ────────────────────────────────────────────────────────────────────
+// CART
 session_start();
 
 if (!isset($_SESSION["cart"])) {
@@ -58,7 +58,7 @@ function formatPrice(float $price): string {
 
 <body class="bg-taupe-50 text-black min-h-screen">
 
-<!-- ── Navbar — mirrors home.html exactly ── -->
+<!-- NAVBAR -->
 <nav class="flex flex-row border-b border-gray-200 bg-taupe-50 sticky top-0 z-50">
     <div class="container mx-auto flex items-center px-3 justify-between py-3">
         <a href="home.php" class="flex items-center gap-2 font-code text-2xl font-semibold tracking-wide">
@@ -79,14 +79,14 @@ function formatPrice(float $price): string {
     </div>
 </nav>
 
-<!-- ── Added-to-cart notice ── -->
+<!-- CART NOTICE -->
 <?php if (isset($_GET['added'])): ?>
 <div class="bg-olive-600 text-white text-center py-2 tracking-wide text-sm font-inter">
     ✓ Item added to cart — you now have <?= $cartCount ?> item(s).
 </div>
 <?php endif; ?>
 
-<!-- ── Hero / Filter bar ── -->
+<!-- HERO BAR -->
 
 <div class="container mb-8 border-b border-gray-200 mx-auto px-4 py-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
 
@@ -116,7 +116,7 @@ function formatPrice(float $price): string {
 </div>
 
 
-<!-- ── Menu Sections ── -->
+<!-- SECTION -->
 <main class="container mx-auto px-4 py-12">
 
 <?php foreach ($categories as $cat): ?>
@@ -124,7 +124,7 @@ function formatPrice(float $price): string {
 
     <section class="menu-section mb-16" data-cat="<?= htmlspecialchars($cat) ?>">
 
-        <!-- Section heading -->
+        <!-- SECTION HEADING -->
         <div class="mb-8 border-b border-gray-200 pb-3">
             <h2 class="font-[Newsreader] text-4xl font-bold uppercase tracking-wide text-black">
                 <?= strtoupper($cat) ?>
@@ -132,7 +132,7 @@ function formatPrice(float $price): string {
             <div class="w-12 h-[2px] bg-olive-600 mt-2"></div>
         </div>
 
-        <!-- Card grid -->
+        <!-- GRID -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
             <?php foreach ($grouped[$cat] as $item):
@@ -141,7 +141,7 @@ function formatPrice(float $price): string {
 
             <div class="bg-white rounded border border-gray-200 overflow-hidden hover:shadow-md hover:-translate-y-0.5 duration-300 flex flex-col">
 
-                <!-- Image -->
+                <!-- IMAGE -->
                 <div class="aspect-square overflow-hidden bg-taupe-100">
                     <img
                         src="<?= htmlspecialchars($item['image']) ?>"
@@ -150,7 +150,7 @@ function formatPrice(float $price): string {
                     >
                 </div>
 
-                <!-- Body -->
+                <!-- BODY -->
                 <div class="p-4 flex flex-col flex-1">
 
                     <h3 class="font-inter uppercase tracking-wide text-lg font-semibold text-gray-500 mb-1">
@@ -187,13 +187,12 @@ function formatPrice(float $price): string {
 <?php endforeach; ?>
 </main>
 
-<!-- ── Footer — matches home.html contact section style ── -->
     <footer class="bg-taupe-100 border-t border-taupe-200 text-center py-8 text-sm text-gray-700 tracking-wide mt-auto">
         <p class="font-semibold">CONTACT US</p>
         <p class="mt-2 text-gray-500">Vintar, Ilocos Norte | 096971287654 | dailydosecoffee@gmail.com</p>
     </footer>
 
-<!-- ── Filter Script ── -->
+<!-- SCRIPT -->
 <script>
     const tabs     = document.querySelectorAll('.filter-tab');
     const sections = document.querySelectorAll('.menu-section');

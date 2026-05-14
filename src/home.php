@@ -11,8 +11,8 @@ $cartCount = array_sum($_SESSION['cart'] ?? []);
     <link href="./output.css" rel="stylesheet">
 </head>
 
-<body>
-    <!-- HEADER -->
+<body class>
+    <!-- NAVBAR -->
 <nav class="flex flex-row border-b border-gray-200 bg-taupe-50 sticky top-0 z-50">
     <div class="container mx-auto flex items-center px-3 justify-between py-3">
         <a href="home.php" class="flex items-center gap-2 font-code text-2xl font-semibold tracking-wide">
@@ -35,14 +35,29 @@ $cartCount = array_sum($_SESSION['cart'] ?? []);
 
     <!-- THE REST -->
     <div class="flex min-h-screen flex-col bg-taupe-50">
-        <main class="flex-1">
-            <section class="container mx-auto px-4 py-32">
-                <div class="mx-auto max-w-4xl text-center font-[Newsreader]">
+        <main class="flex-1 flex items-center justify-center">
+            <section class="container mx-auto px-4 py-40">
+                
+                <!-- BG IMAGES -->
+                <div class="absolute inset-0 pointer-events-none z-0">
+                    <img src="assets/coffee2.png"
+                        class="absolute left-100 top-30 w-100 h-160 object-cover rounded-3xl opacity-30">
+
+                    <img src="assets/coffee1.png"
+                        class="absolute right-90 top-20 w-120 h-90 object-cover rounded-3xl opacity-30">
+
+                    <img src="assets/coffee3.jpg"
+                        class="absolute right-110 bottom-30 w-90 h-100 object-cover rounded-3xl opacity-30">
+                </div>
+
+                <div class="mx-auto z-10 max-w-4xl text-center font-[Newsreader]">
                     <h1 class="text-black mb-6 text-5xl font-bold">
                         DAILY COFFEE
                     </h1>
-                    <p class="text-muted-background mb-10 text-xl">
-                        "Your Daily Dose of Delight"
+                
+                    <p class="text-black leading-relaxed mb-6 text-xl font-semibold">
+                        "Your daily dose of delight for mornings, <br/>
+                        afternoons, and everything in between."
                     </p>
                     <div class="flex flex-col items-center gap-4">
                         <a href="menu.php">

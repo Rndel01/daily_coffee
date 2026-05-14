@@ -24,7 +24,7 @@ $coffees = [
 ];
 
 
-// ─── Handle payment submission ────────────────────────────────────────────────
+// PAYMENT SUBMISSION
 $success = false;
 $errors  = [];
 
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay'])) {
     }
 }
 
-// ─── Build order summary ──────────────────────────────────────────────────────
+// BUILD ORDER SUMMARY
 $cartItems = [];
 $subtotal  = 0.00;
 
@@ -80,7 +80,7 @@ function formatPrice(float $p): string {
 </head>
 <body class="bg-taupe-50 text-black min-h-screen font-inter flex flex-col">
 
-<!-- ── Navbar ── -->
+<!-- NAVBAR -->
 <nav class="flex flex-row border-b border-gray-200 bg-taupe-50 sticky top-0 z-50">
     <div class="container mx-auto flex items-center px-3 justify-between py-3">
         <a href="home.php" class="flex items-center gap-2 font-code text-2xl font-semibold tracking-wide">
@@ -104,7 +104,7 @@ function formatPrice(float $p): string {
 <main class="container mx-auto px-4 py-10 flex-1">
 
     <?php if ($success): ?>
-    <!-- ── Success screen ── -->
+    <!-- ORDER PLACED -->
     <div class="max-w-md mx-auto text-center py-24">
         <div class="text-5xl mb-6"></div>
         <h1 class="font-[Newsreader] text-4xl font-bold mb-3">Order placed!</h1>
@@ -116,7 +116,7 @@ function formatPrice(float $p): string {
     </div>
 
     <?php else: ?>
-
+        <!-- HERO BAR -->
     <div class="mb-8 border-b border-gray-200 pb-4">
         <h1 class="font-[Newsreader] text-5xl font-bold">Payment</h1>
     </div>
@@ -133,7 +133,7 @@ function formatPrice(float $p): string {
 
     <div class="flex flex-col lg:flex-row gap-8 items-start">
 
-        <!-- ── Payment form ── -->
+        <!-- PAYMENT -->
         <form method="post" action="payment.php" class="flex-1 flex flex-col gap-6">
 
             <div class="bg-taupe-100 border border-taupe-200 rounded-lg p-6">
@@ -191,7 +191,7 @@ function formatPrice(float $p): string {
             </button>
         </form>
 
-        <!-- ── Order summary sidebar ── -->
+        <!-- ORDER SUMMARY -->
         <div class="w-full lg:w-72 flex-shrink-0">
             <div class="bg-taupe-100 border border-taupe-200 rounded-lg p-5">
                 <p class="font-semibold text-sm mb-4">Order summary</p>

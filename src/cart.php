@@ -85,7 +85,7 @@ function formatPrice(float $p): string {
 </head>
 <body class="bg-taupe-50 text-black min-h-screen font-inter flex flex-col">
 
-<!-- ── Navbar ── -->
+<!-- NAVBAR -->
 <nav class="flex flex-row border-b border-gray-200 bg-taupe-50 sticky top-0 z-50">
     <div class="container mx-auto flex items-center px-3 justify-between py-3">
         <a href="home.php" class="flex items-center gap-2 font-code text-2xl font-semibold tracking-wide">
@@ -109,6 +109,7 @@ function formatPrice(float $p): string {
 
 <main class="container mx-auto px-4 py-10 flex-1">
 
+    <!-- HERO BAR -->
     <div class="flex items-baseline gap-3 mb-8 border-b border-gray-200 pb-4">
         <h1 class="font-[Newsreader] text-5xl font-bold">Cart</h1>
         <span class="text-gray-500 text-sm"><?= $cartCount ?> item<?= $cartCount !== 1 ? 's' : '' ?></span>
@@ -126,7 +127,7 @@ function formatPrice(float $p): string {
 
     <div class="flex flex-col lg:flex-row gap-8 items-start">
 
-        <!-- ── Cart items ── -->
+        <!-- CART -->
         <div class="flex-1 flex flex-col gap-4">
             <?php foreach ($cartItems as $item):
                 $safeKey = htmlspecialchars($item['key'], ENT_QUOTES);
@@ -179,13 +180,13 @@ function formatPrice(float $p): string {
             <?php endforeach; ?>
         </div>
 
-        <!-- ── Sidebar ── -->
+        <!-- SIDE BAR -->
         <div class="w-full lg:w-72 flex-shrink-0 flex flex-col gap-4">
 
-            <div class="bg-taupe-100 border border-taupe-200 rounded-lg p-4">
+            <!-- <div class="bg-taupe-100 border border-taupe-200 rounded-lg p-4">
                 <p class="text-sm font-semibold mb-3">Service</p>
                 <button class="w-full bg-olive-600 text-white py-2 rounded text-sm font-medium">Pick-up</button>
-            </div>
+            </div> -->
 
             <div class="bg-taupe-100 border border-taupe-200 rounded-lg p-4">
                 <p class="text-sm font-semibold mb-4">Order summary</p>
