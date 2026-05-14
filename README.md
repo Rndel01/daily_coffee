@@ -4,12 +4,19 @@ FrontEnd -- (Next.JS, Tailwind CSS)
 Web Pages
 
   Home               - Almost there
+  
   Login and signup   - Good, but no server interaction
+  
   Cart               - missing
+  
   Menu               - missing
+  
   Profile            - missing
+  
   Admin Settings     - missing
+  
   Admin Dasshboard   - missing
+  
 
 BackEnd -- (PHP??)
   Communication with FrontEnd   - missing
