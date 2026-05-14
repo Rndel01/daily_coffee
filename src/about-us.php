@@ -36,17 +36,11 @@ $cartCount = array_sum($_SESSION['cart'] ?? []);
 
     <!-- THE REST -->
     <main class="flex items-center justify-center min-h-screen bg-taupe-50">
-
-        <div class="absolute inset-0 pointer-events-none z-0">
-            <img src="assets/coffee2.png"
-                class="absolute left-100 top-30 w-100 h-160 object-cover rounded-3xl opacity-20">
-
-            <img src="assets/coffee1.png"
-                class="absolute right-90 top-20 w-120 h-90 object-cover rounded-3xl opacity-20">
-
-            <img src="assets/coffee3.jpg"
-                class="absolute right-110 bottom-30 w-90 h-100 object-cover rounded-3xl opacity-20">
-        </div>
+        
+    <div class="absolute inset-0 z-0">
+        <img src="assets/bg1.jpg"
+             class="w-full h-full object-cover opacity-50">
+    </div>
 
         <div class="w-full max-w-2xl z-10 text-center font-[Newsreader]">
 
