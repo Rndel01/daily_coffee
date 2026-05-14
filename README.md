@@ -8,5 +8,7 @@ npm install
 then 
 
 ``
-npx @tailwindcss/cli -i ./input.css -o ./output.css --watch
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
 ``
+
+keep the command above running to use the tailwind cli
